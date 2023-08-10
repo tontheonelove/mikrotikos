@@ -8,3 +8,4 @@
 | if (dst-len == 24) { reject; } | Reject Subnet /24 |
 | if (bgp-as-path 23932) {set distance 100} | Set distance bgp |
 | if (bgp-as-path 23932) {set bgp-local-pref 450} | set local preference for multiple bgp |
+| if (protocol bgp) {set distance 25} | set distance all bgp |
