@@ -10,3 +10,4 @@
 | if (bgp-as-path 99999) {set bgp-local-pref 450} | set local preference for multiple bgp |
 | if (protocol bgp) {set distance 100; accept} | set distance  bgp route |
 | if (bgp-as-path 99999) {reject;} | reject as-path-route |
+| routing/bgp/advertisements/print where nexthop=180.128.4.129 | check-route |
