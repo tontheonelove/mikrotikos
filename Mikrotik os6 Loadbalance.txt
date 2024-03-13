@@ -1,0 +1,26 @@
+/ip firewall mangle
+add action=mark-connection chain=input in-interface=ether1 new-connection-mark=WAN1_conn
+add action=mark-connection chain=input in-interface=pppoe-out1 new-connection-mark=\
+    WAN2_conn
+add action=mark-routing chain=output connection-mark=WAN1_conn new-routing-mark=to_WAN1
+add action=mark-routing chain=output connection-mark=WAN2_conn new-routing-mark=to_WAN2
+add action=mark-connection chain=prerouting comment=LoadBalance dst-address-type=!local \
+    in-interface=ether5 new-connection-mark=WAN1_conn passthrough=yes \
+    per-connection-classifier=both-addresses-and-ports:2/0
+add action=mark-connection chain=prerouting dst-address-type=!local in-interface=ether5 \
+    new-connection-mark=WAN2_conn passthrough=yes per-connection-classifier=\
+    both-addresses-and-ports:2/1
+add action=mark-routing chain=prerouting connection-mark=WAN1_conn in-interface=ether5 \
+    new-routing-mark=to_WAN1
+add action=mark-routing chain=prerouting connection-mark=WAN2_conn in-interface=ether5 \
+    new-routing-mark=to_WAN2
+
+
+
+/ip route
+add check-gateway=ping distance=1 gateway=180.128.0.254 routing-mark=to_WAN1
+add check-gateway=ping distance=2 gateway=180.128.0.254 routing-mark=to_WAN1
+add check-gateway=ping distance=1 gateway=pppoe-out1 routing-mark=to_WAN2
+add check-gateway=ping distance=2 gateway=pppoe-out1 routing-mark=to_WAN2
+add comment="Default Route" distance=1 gateway=180.128.0.254
+add comment="Default Route" distance=2 gateway=pppoe-out1
