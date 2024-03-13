@@ -20,24 +20,43 @@
 # firewall mangle
 
 /ip firewall mangle
+
 add action=mark-connection chain=prerouting connection-mark=no-mark connection-state=new \
+
     in-interface=ether1 new-connection-mark=ISP1_conn passthrough=yes
+    
 add action=mark-connection chain=prerouting connection-mark=no-mark connection-state=new \
+
     in-interface=pppoe-out1 new-connection-mark=ISP2_conn passthrough=yes
+    
 add action=mark-routing chain=output connection-mark=ISP1_conn new-routing-mark=ISP1 \
+
     passthrough=yes
+    
 add action=mark-routing chain=output connection-mark=ISP2_conn new-routing-mark=ISP2 \
+
     passthrough=yes
+    
 add action=mark-connection chain=prerouting connection-mark=no-mark connection-state=new \
+
     dst-address-type=!local in-interface=ether5 new-connection-mark=ISP1_conn \
+    
     passthrough=yes per-connection-classifier=both-addresses-and-ports:2/0
+    
 add action=mark-connection chain=prerouting connection-mark=no-mark connection-state=new \
+
     dst-address-type=!local in-interface=ether5 new-connection-mark=ISP2_conn \
+    
     passthrough=yes per-connection-classifier=both-addresses-and-ports:2/1
+    
 add action=mark-routing chain=prerouting connection-mark=ISP1_conn in-interface=ether5 \
+
     new-routing-mark=ISP1 passthrough=yes
+    
 add action=mark-routing chain=prerouting connection-mark=ISP2_conn in-interface=ether5 \
+
     new-routing-mark=ISP2 passthrough=yes
+    
 
 
 # ip route
