@@ -16,7 +16,7 @@
 
 # Block Domain with Dns server
 
-add .txt file with pattern   
+add .txt file with pattern   and upload to file im your routeros
 
 0.0.0.0  yourdomain1
 
