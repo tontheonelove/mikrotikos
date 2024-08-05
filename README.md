@@ -19,7 +19,9 @@
 add .txt file with pattern   
 
 0.0.0.0  yourdomain1
+
 0.0.0.0  yourdomain2
+
 0.0.0.0  yourdomain3
 
 <img src= sc.png/>
