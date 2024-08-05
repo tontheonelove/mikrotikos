@@ -16,6 +16,8 @@
 
 # Block Domain with Dns server
 
+<img src= sc.png/>
+
 
 
 
