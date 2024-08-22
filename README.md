@@ -27,7 +27,7 @@ add .txt file with pattern   and upload to file im your routeros
 <img src= sc.png/>
 
 
-# Static DNS for block domain
+# Static DNS for block domain os7 & os6
 
 /ip firewall nat
 
