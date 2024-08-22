@@ -51,6 +51,11 @@ add address=2.2.2.2 name=yourdomain3.com
 <img src=log2.png/>
 
 
+# Netflow to Netflow server os7 & os6
+
+<img src=netflow.png/>
+
+
 
 
 
