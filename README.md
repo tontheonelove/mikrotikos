@@ -55,6 +55,20 @@ add address=2.2.2.2 name=yourdomain3.com
 
 <img src=netflow.png/>
 
+-------------------------------------
+
+# Mark Routing on RouterOS7
+
+routing/table/add name=xxxx fib   (add table for every new mark routing)
+
+ip/firewall/mangle/add src-address=x.x.x.x routing-mark=xxx action=mark-routing   (for mark toute on firewall)
+
+ip/route/add dst-address=x.x.x.x gateway=x.x.x.x routing-table=xxxx   (for force route )
+
+
+
+
+
 
 
 
