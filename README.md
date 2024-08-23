@@ -49,11 +49,17 @@ add address=2.2.2.2 name=yourdomain3.com
 <img src=log.png/>
 -------------------------------------
 <img src=log2.png/>
-
+-------------------------------------
 
 # Netflow to Netflow server os7 & os6
 
 <img src=netflow.png/>
+-------------------------------------
+
+# Netwatch for check network status os7 & os6
+
+![image](https://github.com/user-attachments/assets/260ad835-fca1-48a4-8433-69faba94d5e6)
+
 
 
 
