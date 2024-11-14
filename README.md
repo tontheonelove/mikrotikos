@@ -1,5 +1,11 @@
 # mikrotikos7-bgp
 
+# Let’s Encrypt Certificate on MikroTik RouterOS 7
+
+|1. Enabled Cloud DDNS
+|2. open terminal  and run this command 👉 "certificate/enable-ssl-certificate dns-name=xxx.sn.mynetname.net"
+
+
 # Filter BGP
 
 | Command | 	Purpose |
