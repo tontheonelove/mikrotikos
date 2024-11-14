@@ -12,6 +12,8 @@ wait till msg.  “progess: [success] ssl certificate updated”
 
 Try Open by browsers  👉 URL “https://xxx.sn.mynetname.net”
 
+SSL Expire 90 Day renew it if available
+
 
 # Filter BGP
 
