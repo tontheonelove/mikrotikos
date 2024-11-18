@@ -2,13 +2,13 @@
 
 # Let’s Encrypt Certificate on MikroTik RouterOS 7
 
-|1. Enabled Cloud DDNS
+1. Enabled Cloud DDNS
 
-|2. open terminal  and run this command 👉 "certificate/enable-ssl-certificate dns-name=xxx.sn.mynetname.net"
+2. open terminal  and run this command 👉 "certificate/enable-ssl-certificate dns-name=xxx.sn.mynetname.net"
 
 wait till msg.  “progess: [success] ssl certificate updated”
 
-|3. Enable Service “www-ssl (https)” and Disable Service “www (http)”
+3. Enable Service “www-ssl (https)” and Disable Service “www (http)”
 
 Try Open by browsers  👉 URL “https://xxx.sn.mynetname.net”
 
