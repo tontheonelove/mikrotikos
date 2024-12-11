@@ -8,6 +8,10 @@ add comment="RFC 6996" list=Deny-ASN range=64512-65534
 /routing filter rule
 add chain=your_chain disabled=no rule="if (bgp-as-path [[:Deny-ASN:]]) {reject}"
 ```
+GUI
+
+<img src=s1.png />
+<img src=s2.png />
 
 # Let’s Encrypt Certificate on MikroTik RouterOS 7
 ```
