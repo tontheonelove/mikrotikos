@@ -9,8 +9,10 @@ add comment="RFC 6996" list=Deny-ASN range=64512-65534
 add chain=your_chain disabled=no rule="if (bgp-as-path [[:Deny-ASN:]]) {reject}"
 ```
 GUI
+
 On numset
 <img src=s1.png />
+
 On Rule
 <img src=s2.png />
 
