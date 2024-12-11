@@ -1,4 +1,13 @@
-# mikrotikos7-bgp
+
+# ROS7  Block range ASN  
+
+example 
+
+/routing filter num-list
+add comment="RFC 6996" list=Deny-ASN range=64512-65534
+/routing filter rule
+add chain=your_chain disabled=no rule="if (bgp-as-path [[:Deny-ASN:]]) {reject}"
+
 
 # Let’s Encrypt Certificate on MikroTik RouterOS 7
 
