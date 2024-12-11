@@ -4,7 +4,7 @@
 example 
 ```
 /routing filter num-list
-add comment="RFC 6996" list=Deny-ASN range=64512-65534
+add comment="Deny asn1" list=Deny-ASN range=131293-131300
 /routing filter rule
 add chain=your_chain disabled=no rule="if (bgp-as-path [[:Deny-ASN:]]) {reject}"
 ```
