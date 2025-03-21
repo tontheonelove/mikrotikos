@@ -13,11 +13,8 @@
 - [Block Domain with Dns server  Add list (available on fw 7.15+)](Block%20Website%20with%20dns%20server.md)
 - [Block Domain with dns server static dns (support os6&7)](Static%20DNS%20for%20block%20domain%20os7%20%26%20os6.md)
 - [Send Logging to syslog Server](send%20logging%20to%20syslog.md)
-- [Send Netflow to Netflow analysis server]()
+- [Send Netflow to Netflow analysis server](Netflow%20to%20Netflow%20server%20os7%20%26%20os6.md)
 
-## Netwatch for check network status os7 & os6
-
-![image](https://github.com/user-attachments/assets/260ad835-fca1-48a4-8433-69faba94d5e6)
 
 
 
