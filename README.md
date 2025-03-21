@@ -35,18 +35,8 @@ GUI
 - On Rule
 <img src=s2.png />
 
-## Let’s Encrypt Certificate on MikroTik RouterOS 7
+- [Let’s Encrypt Certificate on MikroTik RouterOS 7](Let’s%20Encrypt%20Certificate%20on%20MikroTik%20RouterOS%207.txt)
 
-- 1 Enabled Cloud DDNS
-- 2 open terminal  and run this command 👉
-```
-certificate/enable-ssl-certificate dns-name=xxx.sn.mynetname.net
-```
-wait till msg.  “progess: [success] ssl certificate updated”
-- 3 Enable Service “www-ssl (https)” and Disable Service “www (http)”
-Try Open by browsers  👉 URL “https://xxx.sn.mynetname.net”
-
-SSL Expire 90 Day renew it if available
 
 
 ## Filter BGP
