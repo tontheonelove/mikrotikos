@@ -1,17 +1,17 @@
-# SYN Attack Protect
+## SYN Attack Protect
 
-# SYN Flood
+## SYN Flood
 ```
 /ip/settings/set tcp-syncookies=yes
 ```
-# SYN-ACK Flood
+## SYN-ACK Flood
 ```
 /ip/firewall/filter add action=return chain=detect-ddos dst-limit=32,32,src-and-dst-addresses/10s protocol=tcp tcp-flags=syn,ack
 ```
 
 
 
-# ROS7  Block range ASN  
+## ROS7  Block range ASN  
 
 example 
 ```
