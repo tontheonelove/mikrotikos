@@ -3,7 +3,7 @@
 ## LoadBalancer
 
 - [for os6..](Mikrotik%20os6%20Loadbalance.txt)
-- [for os7..]()
+- [for os7..](Mikrotik%20os7%20Loadbalance.txt)
 
 ## SYN Flood
 ```
