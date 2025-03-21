@@ -10,17 +10,8 @@
 - [ROS7  Block range ASN  ](ROS7%20Block%20range%20ASN%20example%20%20ROS7%20Block%20range%20ASN.md)
 - [Let’s Encrypt Certificate on MikroTik RouterOS 7](Let’s%20Encrypt%20Certificate%20on%20MikroTik%20RouterOS%207.txt)
 - [Bgp Filtering](Filter%20BGP.md)
+- [Block Domain with Dns server  Add list (available on fw 7.15+)](Block%20Website%20with%20dns%20server.md)
 
-
-
-## Block Domain with Dns server  Add list (available on fw 7.15+)
-```
-add .txt file with pattern   and upload to file im your routeros
-0.0.0.0  yourdomain1
-0.0.0.0  yourdomain2
-0.0.0.0  yourdomain3
-```
-<img src= sc.png/>
 
 
 ## Static DNS for block domain os7 & os6
