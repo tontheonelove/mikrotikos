@@ -1,5 +1,7 @@
 # MikrotikOS Configuration
 
+<img src=https://logonoid.com/images/mikrotik-logo.png/>
+
 ## LoadBalancer
 
 - [for os6..](Mikrotik%20os6%20Loadbalance.txt)
