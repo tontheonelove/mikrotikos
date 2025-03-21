@@ -1,5 +1,10 @@
 ## SYN Attack Protect
 
+## LoadBalancer
+
+- [for os6..]()
+- [for os7..]()
+
 ## SYN Flood
 ```
 /ip/settings/set tcp-syncookies=yes
