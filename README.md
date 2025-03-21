@@ -16,7 +16,7 @@
 - [Send Netflow to Netflow analysis server](Netflow%20to%20Netflow%20server%20os7%20%26%20os6.md)
 - [VRRP (Virtual Router Redundancy Protocol) on MikroTik routers for high availability](VRRP%20(Virtual%20Router%20Redundancy%20Protocol)%20on%20MikroTik%20routers%20for%20high%20availability.md)
 - [WireGuard VPN site to site](WireGuard%20VPN%20site%20to%20site.md)
-
+- [WAN failover]()
 
 
 
