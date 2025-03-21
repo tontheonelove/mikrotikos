@@ -1,4 +1,4 @@
-## SYN Attack Protect
+# MikrotikOS Configuration
 
 ## LoadBalancer
 
