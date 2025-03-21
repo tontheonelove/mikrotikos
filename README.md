@@ -13,13 +13,6 @@
 - [Block Domain with Dns server  Add list (available on fw 7.15+)](Block%20Website%20with%20dns%20server.md)
 - [Block Domain with dns server static dns (support os6&7)](Static%20DNS%20for%20block%20domain%20os7%20%26%20os6.md)
 
-## send logging to syslog server os7 & os6
--------------------------------------
-<img src=log.png/>
--------------------------------------
-<img src=log2.png/>
--------------------------------------
-
 ## Netflow to Netflow server os7 & os6
 
 <img src=netflow.png/>
