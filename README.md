@@ -22,10 +22,10 @@ add chain=your_chain disabled=no rule="if (bgp-as-path [[:Deny-ASN:]]) {reject}"
 ```
 GUI
 
-On numset
+- On numset
 <img src=s1.png />
 
-On Rule
+- On Rule
 <img src=s2.png />
 
 ## Let’s Encrypt Certificate on MikroTik RouterOS 7
