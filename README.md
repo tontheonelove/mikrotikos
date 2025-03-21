@@ -2,22 +2,12 @@
 
 <img src=https://logonoid.com/images/mikrotik-logo.png/>
 
-## LoadBalancer
+## List (update 21- 3 - 25)
 
 - [for os6..](Mikrotik%20os6%20Loadbalance.txt)
 - [for os7..](Mikrotik%20os7%20Loadbalance.txt)
-
-## SYN Flood
-```
-/ip/settings/set tcp-syncookies=yes
-```
-## SYN-ACK Flood
-```
-/ip/firewall/filter add action=return chain=detect-ddos dst-limit=32,32,src-and-dst-addresses/10s protocol=tcp tcp-flags=syn,ack
-```
-
+- [Block Syn Flood](Mirkotik Block Syn Flood)
 - [ROS7  Block range ASN  ](ROS7%20Block%20range%20ASN%20example%20%20ROS7%20Block%20range%20ASN.md)
-
 - [Let’s Encrypt Certificate on MikroTik RouterOS 7](Let’s%20Encrypt%20Certificate%20on%20MikroTik%20RouterOS%207.txt)
 
 
