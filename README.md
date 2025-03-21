@@ -16,24 +16,7 @@
 /ip/firewall/filter add action=return chain=detect-ddos dst-limit=32,32,src-and-dst-addresses/10s protocol=tcp tcp-flags=syn,ack
 ```
 
-
-
-## ROS7  Block range ASN  
-
-example 
-```
-/routing filter num-list
-add comment="Deny-ASN" list=Deny-ASN range=131293-131300
-/routing filter rule
-add chain=your_chain disabled=no rule="if (bgp-as-path [[:Deny-ASN:]]) {reject}"
-```
-GUI
-
-- On numset
-<img src=s1.png />
-
-- On Rule
-<img src=s2.png />
+- [ROS7  Block range ASN  ](ROS7%20Block%20range%20ASN%20example%20%20ROS7%20Block%20range%20ASN.md)
 
 - [Let’s Encrypt Certificate on MikroTik RouterOS 7](Let’s%20Encrypt%20Certificate%20on%20MikroTik%20RouterOS%207.txt)
 
