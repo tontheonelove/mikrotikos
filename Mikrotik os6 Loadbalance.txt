@@ -18,9 +18,9 @@ add action=mark-routing chain=prerouting connection-mark=WAN2_conn in-interface=
 
 
 /ip route
-add check-gateway=ping distance=1 gateway=180.128.0.254 routing-mark=to_WAN1
-add check-gateway=ping distance=2 gateway=180.128.0.254 routing-mark=to_WAN1
+add check-gateway=ping distance=1 gateway=192.168.0.254 routing-mark=to_WAN1
+add check-gateway=ping distance=2 gateway=192.168.0.254 routing-mark=to_WAN1
 add check-gateway=ping distance=1 gateway=pppoe-out1 routing-mark=to_WAN2
 add check-gateway=ping distance=2 gateway=pppoe-out1 routing-mark=to_WAN2
-add comment="Default Route" distance=1 gateway=180.128.0.254
+add comment="Default Route" distance=1 gateway=192.168.0.254
 add comment="Default Route" distance=2 gateway=pppoe-out1
