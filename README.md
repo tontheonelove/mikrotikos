@@ -28,7 +28,7 @@ On numset
 On Rule
 <img src=s2.png />
 
-# Let’s Encrypt Certificate on MikroTik RouterOS 7
+## Let’s Encrypt Certificate on MikroTik RouterOS 7
 
 - 1 Enabled Cloud DDNS
 - 2 open terminal  and run this command 👉
@@ -42,7 +42,7 @@ Try Open by browsers  👉 URL “https://xxx.sn.mynetname.net”
 SSL Expire 90 Day renew it if available
 
 
-# Filter BGP
+## Filter BGP
 
 | Command | 	Purpose |
 | --- | --- |
@@ -56,7 +56,7 @@ SSL Expire 90 Day renew it if available
 
 
 
-# Block Domain with Dns server  Add list (available on fw 7.15+)
+## Block Domain with Dns server  Add list (available on fw 7.15+)
 ```
 add .txt file with pattern   and upload to file im your routeros
 0.0.0.0  yourdomain1
@@ -66,7 +66,7 @@ add .txt file with pattern   and upload to file im your routeros
 <img src= sc.png/>
 
 
-# Static DNS for block domain os7 & os6
+## Static DNS for block domain os7 & os6
 ```
 /ip firewall nat
 add action=redirect chain=dstnat dst-port=53 protocol=tcp to-ports=53
@@ -77,19 +77,19 @@ add address=2.2.2.2 name=yourdomain2.com
 add address=2.2.2.2 name=yourdomain3.com
 ```
 
-# send logging to syslog server os7 & os6
+## send logging to syslog server os7 & os6
 -------------------------------------
 <img src=log.png/>
 -------------------------------------
 <img src=log2.png/>
 -------------------------------------
 
-# Netflow to Netflow server os7 & os6
+## Netflow to Netflow server os7 & os6
 
 <img src=netflow.png/>
 -------------------------------------
 
-# Netwatch for check network status os7 & os6
+## Netwatch for check network status os7 & os6
 
 ![image](https://github.com/user-attachments/assets/260ad835-fca1-48a4-8433-69faba94d5e6)
 
