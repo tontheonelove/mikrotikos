@@ -18,6 +18,7 @@
 - [WireGuard VPN site to site](WireGuard%20VPN%20site%20to%20site.md)
 - [WAN failover](mikrotikos/blob/main/WAN%20failover.md)
 - [SMB Server For Download/Upload any file recommended on mikrotik CHR Or X86](smb.md)
+- [OSFP 2 Router]()
 
 
 
