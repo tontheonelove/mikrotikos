@@ -4,7 +4,7 @@
 
 ## List (update 24- 3 - 25)
 
-- [EoIP over SSTP (Secure and can use the same Gateway)](Mikrotik%20IPsec%20site-to-site%20VPN%20between%20two%20routers.md)
+- [EoIP over SSTP (Secure and can use the same Gateway)](config/EoIP%20over%20SSTP.md)
 - [Load Balance for os6..](Mikrotik%20os6%20Loadbalance.txt)
 - [Load Balance for os7..](Mikrotik%20os7%20Loadbalance.txt)
 - [Block Syn Flood](Mirkotik%20Block%20Syn%20Flood.md)
