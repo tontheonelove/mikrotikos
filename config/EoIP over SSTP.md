@@ -15,13 +15,10 @@ Site B: เชื่อม SSTP ไป Site A
 
 Site A:
 
-`
-Interface > Add > EoIP Tunnel
+`Interface > Add > EoIP Tunnel
 Remote Address: IP WAN ของ Site B (หรือ VPN IP)
 Tunnel ID: 1
-Bind to Interface: sstp-in1
-
-`
+Bind to Interface: sstp-in1`
 
 Site B:
 
