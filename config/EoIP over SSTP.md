@@ -19,7 +19,7 @@ Site A:
 
 ``
 Interface > Add > EoIP Tunnel
-Remote Address: IP WAN ของ Site B (หรือ VPN IP)
+Remote Address: IP WAN Site B
 Tunnel ID: 1
 Bind to Interface: sstp-in1
 ``
@@ -29,8 +29,8 @@ Site B:
 
 ``
 Interface > Add > EoIP Tunnel
-Remote Address: IP WAN ของ Site A
-Tunnel ID: 1 (ต้องตรงกัน)
+Remote Address: IP WAN Site A
+Tunnel ID: 1
 Bind to Interface: sstp-out1
 ``
 
