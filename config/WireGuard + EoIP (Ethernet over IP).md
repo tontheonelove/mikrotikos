@@ -1,5 +1,6 @@
 # WireGuard + EoIP (Ethernet over IP)
 
+## *** when every thing is done dont forgot Set MTU on Bridge to 1500 ***
 
 🎯 Goal
 
