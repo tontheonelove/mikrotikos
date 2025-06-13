@@ -4,7 +4,7 @@
 
 ## List (update 13 - 6 - 25)
 
-- [BGP MED (Multi-Exit Discriminator)..](config/BGP%20ECMP%20%2B%20Routing%20Rules%20%2B%20PCCNTH.md)
+- [BGP ECMP + Routing Rules + PCCNTH(BGP loadbalancer)..](config/BGP%20ECMP%20%2B%20Routing%20Rules%20%2B%20PCCNTH.md)
 - [BGP MED (Multi-Exit Discriminator)..](config/BGP%20MED%20(Multi-Exit%20Discriminator).md)
 - [WireGuard + EoIP (Ethernet over IP))](config/WireGuard%20+%20EoIP%20(Ethernet%20over%20IP).md)
 - [EoIP over SSTP (Secure and can use the same Gateway)](config/EoIP%20over%20SSTP.md)
