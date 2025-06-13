@@ -4,6 +4,8 @@
 
 ## List (update 24- 3 - 25)
 
+
+- [BGP MED (Multi-Exit Discriminator)..](config/BGP%20MED%20(Multi-Exit%20Discriminator).md)
 - [WireGuard + EoIP (Ethernet over IP))](config/WireGuard%20+%20EoIP%20(Ethernet%20over%20IP).md)
 - [EoIP over SSTP (Secure and can use the same Gateway)](config/EoIP%20over%20SSTP.md)
 - [Load Balance for os6..](Mikrotik%20os6%20Loadbalance.txt)
