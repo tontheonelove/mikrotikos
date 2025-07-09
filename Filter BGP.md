@@ -10,3 +10,4 @@
 | if (bgp-as-path 99999) {reject;} | reject as-path-route |
 | if (dst==0.0.0.0/23) {set bgp-path-prepend 3; accept} | control Inbound Traffic
 | routing/bgp/advertisements/print where nexthop=XXX.XXX.XXX.XXX | check-route |
+| if (bgp-as-path 99999 && dst-len==22) {reject} | Reject all network /22 on as-path 999999
