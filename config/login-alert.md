@@ -19,9 +19,11 @@ Example:
 
 ## 🧩 Step 2: หา Chat ID
 
-ค้นหา @userinfobot
+พิม hello ใน chat ของ bot 
 
-กด start → จะได้ Chat ID
+จากนั้นพิมที่ browser  https://api.telegram.org/bot<Yourbot>/getUpdates
+
+จะได้ Chat ID
 
 ```
 123456789
