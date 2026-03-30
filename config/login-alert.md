@@ -75,7 +75,9 @@ Example:
 ## 🧩 Step 4: ตั้ง Scheduler
 
 ```
-/system scheduler add name=check-login interval=10s on-event=check-login
+/system scheduler
+add interval=10s name=schedule1 on-event=LoginAlert policy=\
+    ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon start-time=startup
 ```
 
 
