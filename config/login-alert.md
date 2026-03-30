@@ -30,76 +30,58 @@ Example:
 ```
 
 
-## 🧩 Step 3: ทดสอบส่งข้อความจาก MikroTik
-
-เข้า Winbox → New Terminal 
+## 🧩 Step 3: สร้าง Script แจ้งเตือน
 
 ```
-/tool fetch url="https://api.telegram.org/bot<BOT_TOKEN>/sendMessage?chat_id=<CHAT_ID>&text=TEST_MIKROTIK" keep-result=no
-```
+# 1. แก้ชื่อให้ตรงกับชื่อ Script ของคุณใน Winbox
+:local ScriptName "LoginAlert"; 
 
-ถ้าข้อความเด้งใน Telegram = ผ่าน ✅
-
-
-## 🧩 Step 4: เปิด Log สำหรับ Login
-
-```
-/system logging add topics=account
-```
-
-## 🧩 Step 5: สร้าง Script แจ้งเตือน
-
-```
-# ==========================================
-# ????????????????: ??? Token ??? ID ??????
-# ==========================================
-:local BotToken " YOUR BOT TOKEN";
-:local ChatID "YOUR CHAT ID";
+:local BotToken "YOUR BOT TOKEN";
+:local ChatID "YOUR BOT ID";
 :local DeviceName [/system identity get name];
 
-:global LastLoginLogID;
+# ดึง ID ล่าสุดจาก Comment (ต่อให้ Reboot ค่านี้ก็ไม่หาย)
+:local LastID [/system script get [find name=$ScriptName] comment];
 
-# ค้นหา Log ที่เป็นการ Login จริงๆ (ระบุว่าต้องมีคำว่า user นำหน้า)
-:local logEvents [/log find where message~"user .* logged in" or message~"login failure"];
+# ค้นหาใน Log Topic account
+:local logEvents [/log find where topics~"account"];
 
 :if ([:len $logEvents] > 0) do={
     :local currentLogID [:pick $logEvents ([:len $logEvents]-1)];
 
-    :if ($currentLogID != $LastLoginLogID) do={
-        :set LastLoginLogID $currentLogID;
+    if ($currentLogID != $LastID) do={
+        
+        # บันทึก ID ลง Comment ของ Script นี้
+        /system script set [find name=$ScriptName] comment=$currentLogID;
         
         :local logMessage [/log get $currentLogID message];
         :local logTime [/log get $currentLogID time];
         
-        # --- ???????????????????????? %20 ??????????????????? ---
         :local encodedMsg "";
         :for i from=0 to=([:len $logMessage] - 1) do={
             :local char [:pick $logMessage $i];
-            :if ($char = " ") do={
-                :set encodedMsg ($encodedMsg . "%20");
-            } else={
-                :set encodedMsg ($encodedMsg . $char);
-            }
+            :if ($char = " ") do={ :set encodedMsg ($encodedMsg . "%20") } else={ :set encodedMsg ($encodedMsg . $char) }
         }
         
-        # ????????? URL (??? %20 ????????????????????? ????)
-        :local tgText "??%20MikroTik%20Alert%0ADevice:%20$DeviceName%0ATime:%20$logTime%0ADetail:%20$encodedMsg";
+        :local tgText "[SEC-ALERT]%20Device:%20$DeviceName%0ATime:%20$logTime%0ADetail:%20$encodedMsg";
         :local tgUrl "https://api.telegram.org/bot$BotToken/sendMessage?chat_id=$ChatID&text=$tgText";
         
-        # ????????? (??????????????? Certificate ???????????????? v7)
         /tool fetch url=$tgUrl keep-result=no check-certificate=no;
     }
 }
 ```
 
 
-## 🧩 Step 6: ตั้ง Scheduler
+## 🧩 Step 4: ตั้ง Scheduler
 
 ```
 /system scheduler add name=check-login interval=10s on-event=check-login
 ```
 
 
+# Result 
+
+<img width="620" height="270" alt="image" src="https://github.com/user-attachments/assets/a16826e6-7295-466f-aae8-e1861c671689" />
 
 
 
